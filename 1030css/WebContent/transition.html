@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>트랜지션 애니메이션</title>
+
+<style>
+*{
+	margin:0px;
+	padding:0px;
+}
+
+li{
+	/* 글머리 기호 삭제 */
+	list-style-type:none;
+}
+h2, ul{
+	/* 경계선과 콘텐츠 사이의 여백 설정 */
+	padding:10px;
+}
+/* li 안에 있는 a태그에 적용*/
+li a{
+	text-decoration:none; /* 밑줄 제거 */
+	color:#123456;
+	background-color:#abc; /* aabbcc가 적용 */
+	display:block; /* 블록 요소 만들기 */
+	width:300px;
+	height:20px;
+	padding:10px;
+	/* 애니메이션 설정 
+		너비가 변할 때는 2초동안 변화*/
+	-webkit-transition:width 2.0s;
+	
+}
+li a:hover{width:450px; color:#c00; 
+			background-color:#cba}
+
+@-webkit-keyframes keyany{
+	from{
+		left:0px;
+		top:400px;
+		-webkit-transform:rotate(0deg);
+	}
+	to{
+		left:500px;
+		top:400px;
+		-webkit-transform:rotate(1800deg);
+	}
+}
+img{
+	position:absolute;
+	-webkit-animation-name:keyany;
+	-webkit-animation-duration:5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:alternate;
+}
+
+</style>
+</head>
+<body>
+	<img src="./images/축구공1.jpeg" 
+	width="200" height="150"/>
+	
+	<h2>객채지향의 3대 특징</h2>
+	<ul>
+		<li><a href="#">Encapsulation(캡슐화)</a></li>
+		<li><a href="#">Inheritance(상속성)</a></li>
+		<li><a href="#">Polymorphism(다형성)</a></li>
+		
+	</ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>반응형 웹</title>
+<!-- 가로 너비를 화면에 가득차게 설정 -->
+<meta name=“viewport” content=“width=device-width, 
+		initial-scale=1.0, user-scalable=no”/>
+<style>
+	body{
+	background-color:gray;
+	}
+	img{
+		width:512px;
+		height:512px;
+	}
+	/* 화면 너비가 960px이 될 때까지 적용 */
+	@media screen and (max-width:960px){
+		body{
+		background-color:green;
+		}
+		img{
+		width:256px;
+		height:256px;
+	}
+	}
+	@media screen and (max-width:500px){
+	    body{
+		background-color:yellow;
+		}
+		img{
+		width:128px;
+		height:128px;
+	}
+	}
+	@media screen and (max-width:320px){
+	    body{
+		background-color:orange;
+		}
+	}
+</style>
+</head>
+<body>
+	<img src="./images/축구공1.jpeg"/>
+</body>
+</html>
