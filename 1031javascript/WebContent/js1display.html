@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바 스크립트를 이용한 출력</title>
+</head>
+<body>
+</body>
+<script>
+	//화면에는 출력하지 않고 브라우저의 console 창에 출력
+	//디버깅 할 때 주로 이용한다.
+	console.log("콘솔에 출력");
+	
+	//대화상자에 출력 -팝업창 
+	alert("대화상자에 출력");
+	
+	//HTML 문서에 출력 
+	//한 줄에 2개의 명령어 사용시에는 ;으로 구분해야 한다.
+	//document.write("출력"); document.write("출력")
+	
+	//writeln은 바로 바로 출력하므로 태그를 나누어 작성하면 
+	//문제가 발생할 가능성이 있다.
+	document.writeln("<a hr");
+	document.writeln("ef='https://www.google.com'>");
+	document.writeln("구글</a>");
+	
+	document.writeln("<br/>");
+	
+	//write는 모아서 출력하므로 나눠 써도 한꺼번에 출력된다. 
+	document.write("<a hr");
+	document.write("ef='https://www.google.com'>");
+	document.write("구글</a>");
+
+	
+</script>
+
+</html>
