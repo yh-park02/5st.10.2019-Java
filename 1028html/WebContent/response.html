@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<img src="./image/2.png" 
+		width="30%" height="300"/>
+	<img src="./image/4.png"
+		width="30%" height="300" />
+		
+	<!-- 이미지를 클릭하면 구글사이트로 이동 -->
+	<a href="https://www.google.com">
+		<img src="./image/2.png"
+		width="200" height="300"/>
+	</a>
+	
+	<!-- 좌표를 지정 후(이미지를 반반 나눠서)
+	왼쪽은 구글, 오른쪽은 다음으로 이동 -->
+	<img src="./image/2.png"
+	width="300" height="300" usemap="#park"/>
+	<map name="#park">
+		<area shape="rect"
+		coords="0,0,150,300" target='_blank'
+		alt="left" href="https://www.google.com"/>
+		
+		<area shape="rect"
+		coords="150,0,300,300" target='_blank'
+		alt="right" href="https://www.daum.net"/>
+	</map>
+	
+	
+</body>
+</html>
