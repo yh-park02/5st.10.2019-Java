@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+	<form action="register.jsp">
+		<fieldset>
+			<legend>회원가입</legend>
+				<!-- 아이디 -->
+				<label for="id">아이디</label>
+				<input type="text" id="id" name="id"
+				size="20">
+				<input type="button" id="idcheck"
+				value="중복확인"/>
+				<div id="msg"></div>
+				<br/>
+				<!-- blur을 사용하면 버튼없이 아이디 중복검사 가능 -->
+				<script>
+					document.getElementById("id")
+					.addEventListener("blur", function(e){
+						if(document.getElementById("id").value == "root"){
+						document.getElementById("msg").innerHTML =
+						"사용 불가능한 아이디입니다."
+						document.getElementById("msg").style.color="red"	
+						}
+					});
+				</script>
+				
+				
+				<!-- 비밀번호 -->
+				<label for="pw">비밀번호</label>
+				<input type="password" id="pw" name="pw"
+				size="20"><br/>
+				
+				<!-- 이메일 -->
+				<label for="email">이메일</label>
+				<input type="text" id="email" name="email"
+				size="30"/>@
+				<select name="corp">
+					<option value="direct">직접입력</option>
+					<option value="gamil">gamil.com</option>
+					<option value="naver">naver.com</option>
+				</select>
+				
+				<!-- 성별 -->
+				<!--라이오버튼은 이름으로 묶기! name="gender" 
+				묶어놓지 않으면 남자,여자 둘다 선택이 된다.
+				checked를 사용해서 선택해놓기 -->
+				<br/>
+				<label for="gender">성별</label>
+				<input type="radio" name="gender" 
+				checked="checked" value="man"/>남자
+				<input type="radio" name="gender" 
+				value="man"/>여자
+				<br/>
+				
+				<!-- 파일 -->
+				<!-- accept 속성으로 이미지 파일만 선택하게 제한 -->
+				<label for="image">이미지</label>
+				<input type="file" name="image" id="image"
+				accept=".gif, .jpg, .png, .jpeg"/>
+				<br/>
+				
+				<!-- 많은 텍스트 -->
+				<label for="story">하고 싶은 이야기</label>
+				<br/>
+				<textarea rows="10" cols="40" name="story"
+				id="story"></textarea>
+				<br/>
+				
+				<!-- 버튼 추가 -->
+				<input type="submit" value="회원가입" />
+				<input type="reset" value="작성취소" />
+				<input type="button" value="메인으로"
+				onclick="location.href='./'" />
+				
+				<!-- list 만들기 -->
+				<select size="3" multiple="multiple">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</select>
+		</fieldset>
+	</form>
+</body>
+</html>
